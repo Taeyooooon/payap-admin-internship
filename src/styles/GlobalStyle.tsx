@@ -105,6 +105,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    margin-left: 220px;
   }
   ol,
   ul {
