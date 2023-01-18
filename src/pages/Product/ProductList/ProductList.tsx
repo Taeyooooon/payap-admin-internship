@@ -1,16 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
+import ProductListTable from './ProductListTable';
+
+const FILTER_ITEM = [
+  // TODO: isClicked 로직 추가
+  { id: 1, item: 'All(5)', isClicked: false },
+  { id: 2, item: 'Waiting for sale(1)', isClicked: true },
+  { id: 3, item: 'On sale(2)', isClicked: false },
+  { id: 4, item: 'Sold out(2)', isClicked: false },
+];
 
 const ProductList = () => {
+  const [selectedFilter, setSelectedFilter] = useState<string>('All(5)');
+  const navigate = useNavigate();
+
+  const onFilterItemClick = (item: string) => setSelectedFilter(item);
+
   return (
     <Wrapper>
       <Header>
         <Title>Product List</Title>
-        <UploadBtn>
+        <UploadBtn
+          onClick={() => {
+            navigate('/product-upload');
+          }}
+        >
           <PlusIcon>+</PlusIcon>
-          <BtnText>Upload Product</BtnText>
+          <span>Upload Product</span>
         </UploadBtn>
       </Header>
+
+      <FilterList>
+        {FILTER_ITEM.map(({ id, item, isClicked }) => {
+          return (
+            <FilterItem
+              key={id}
+              selected={selectedFilter === item}
+              onClick={() => onFilterItemClick(item)}
+            >
+              {item}
+            </FilterItem>
+          );
+        })}
+      </FilterList>
+
+      <SearchBox>
+        <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
+        <SearchInput placeholder="Search product name" />
+      </SearchBox>
+
+      <ProductListTable />
     </Wrapper>
   );
 };
@@ -46,8 +88,6 @@ const PlusIcon = styled.span`
   color: #3d68ff;
 `;
 
-const BtnText = styled.span``;
-
 const UploadBtn = styled.button`
   display: flex;
   justify-content: center;
@@ -59,6 +99,52 @@ const UploadBtn = styled.button`
   background-color: #3d68ff;
   color: #fff;
   font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.5px;
   line-height: 22.4px;
   cursor: pointer;
+`;
+
+const FilterList = styled.ul`
+  display: flex;
+  margin-top: 44px;
+  border-bottom: 1px solid #eaecf0;
+`;
+
+const FilterItem = styled.li`
+  border-bottom: 2px solid
+    ${({ selected }: { selected: boolean }) =>
+      selected ? '#3D68FF' : 'trasparent'};
+  color: ${({ selected }: { selected: boolean }) =>
+    selected ? '#3D68FF' : '#AEB4BE'};
+  font-weight: ${({ selected }: { selected: boolean }) =>
+    selected ? '700' : '400'};
+  padding-bottom: 12px;
+  font-size: 14px;
+  margin-left: 16px;
+  cursor: pointer;
+`;
+
+const SearchBox = styled.div`
+  margin-top: 20px;
+  position: relative;
+
+  & .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+`;
+
+const SearchInput = styled.input`
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dfe1e6;
+  border-radius: 12px;
+  padding: 0 40px;
+
+  &::placeholder {
+    color: #ced1d8;
+  }
 `;

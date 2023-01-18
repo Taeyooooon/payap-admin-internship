@@ -23,7 +23,7 @@ const BTN_LIST: BtnListItem[] = [
     title: 'Order Management',
     icon: faClipboard,
     link: 'order-list',
-    list: [{ id: 1, item: 'Order / Shipping', link: 'order-list' }],
+    list: [{ id: 1, item: 'Order List', link: 'order-list' }],
   },
   {
     id: 2,
@@ -48,7 +48,7 @@ const Aside = () => {
   return (
     <Wrapper>
       <LogoSection>
-        <img src="#" alt="logo" />
+        <img src="/images/lienmall-logo.svg" alt="logo" />
         <LogoText>Giftmall</LogoText>
       </LogoSection>
       <MenuSection>
@@ -58,9 +58,7 @@ const Aside = () => {
               <Link to={link}>
                 <ListTitle
                   btnClicked={btnClicked === link}
-                  onClick={() => {
-                    onListClick(link);
-                  }}
+                  onClick={() => onListClick(link)}
                 >
                   <FontAwesomeIcon icon={icon} size="lg" className="icon" />
                   <span>{title}</span>
@@ -93,22 +91,27 @@ const Wrapper = styled.aside`
   top: 0;
   bottom: 0;
   width: 220px;
-  padding: 0 10px;
+  padding: 0 16px;
   background-color: #2a2e35;
 `;
 
 const LogoSection = styled.section`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   height: 56px;
   padding: 20px 0;
 `;
 
 const LogoText = styled.span`
   font-weight: 500;
-  line-height: 16px;
+  line-height: 24px;
   color: #888888;
 `;
 
-const MenuSection = styled.section``;
+const MenuSection = styled.section`
+  margin-top: 16px;
+`;
 
 const ListWrapper = styled.div``;
 
