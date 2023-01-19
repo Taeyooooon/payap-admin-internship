@@ -71,7 +71,7 @@ const ProductList = () => {
         <StatusChangeButton>Change product status</StatusChangeButton>
       </StatusChangeButtonBox>
 
-      <ProductListTable />
+      <ProductListTable currentPage={currentPage} />
 
       <PageBtnBox>
         <PageBtn onClick={onPrevClick}>
