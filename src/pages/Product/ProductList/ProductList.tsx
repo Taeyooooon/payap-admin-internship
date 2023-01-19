@@ -1,23 +1,38 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMagnifyingGlass,
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import ProductListTable from './ProductListTable';
 
 const FILTER_ITEM = [
   // TODO: isClicked 로직 추가
-  { id: 1, item: 'All(5)', isClicked: false },
-  { id: 2, item: 'Waiting for sale(1)', isClicked: true },
-  { id: 3, item: 'On sale(2)', isClicked: false },
-  { id: 4, item: 'Sold out(2)', isClicked: false },
+  { id: 1, item: 'All(5)' },
+  { id: 2, item: 'Waiting for sale(1)' },
+  { id: 3, item: 'On sale(2)' },
+  { id: 4, item: 'Sold out(2)' },
 ];
 
 const ProductList = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All(5)');
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [itemsPerPage] = useState<number>(10);
   const navigate = useNavigate();
 
   const onFilterItemClick = (item: string) => setSelectedFilter(item);
+
+  const onPrevClick = () => {
+    if (currentPage <= 1) return;
+    setCurrentPage(currentPage - 1);
+  };
+
+  const onNextClick = () => {
+    setCurrentPage(currentPage + 1);
+  };
 
   return (
     <Wrapper>
@@ -34,7 +49,7 @@ const ProductList = () => {
       </Header>
 
       <FilterList>
-        {FILTER_ITEM.map(({ id, item, isClicked }) => {
+        {FILTER_ITEM.map(({ id, item }) => {
           return (
             <FilterItem
               key={id}
@@ -52,7 +67,21 @@ const ProductList = () => {
         <SearchInput placeholder="Search product name" />
       </SearchBox>
 
+      <StatusChangeButtonBox>
+        <StatusChangeButton>Change product status</StatusChangeButton>
+      </StatusChangeButtonBox>
+
       <ProductListTable />
+
+      <PageBtnBox>
+        <PageBtn onClick={onPrevClick}>
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </PageBtn>
+        <CurrentPage>{currentPage}</CurrentPage>
+        <PageBtn onClick={onNextClick}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </PageBtn>
+      </PageBtnBox>
     </Wrapper>
   );
 };
@@ -147,4 +176,48 @@ const SearchInput = styled.input`
   &::placeholder {
     color: #ced1d8;
   }
+`;
+
+const StatusChangeButtonBox = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 12px;
+`;
+
+const StatusChangeButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  border: 1px solid #3d68ff;
+  border-radius: 12px;
+  background-color: transparent;
+  color: #3d68ff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+`;
+
+const PageBtnBox = styled.div`
+  margin-top: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+`;
+
+const PageBtn = styled.button`
+  border: 1px solid #eaecf0;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
+const CurrentPage = styled.span`
+  font-weight: 600;
+  font-size: 14px;
+  width: 32px;
+  text-align: center;
 `;

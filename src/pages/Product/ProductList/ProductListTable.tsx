@@ -1,73 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const PRODUCT_DATA = [
-  {
-    id: 1,
-    saleStatus: 'On sale',
-    productInfo:
-      'Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI',
-    category: '여성의류',
-    price: '279,000',
-    shippingFee: 'Free Shipping',
-    uploadDate: '29-04-2022 20:00',
-    lastEdited: '29-04-2022 20:00',
-  },
-  {
-    id: 2,
-    saleStatus: 'On sale',
-    productInfo:
-      'Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI',
-    category: '여성의류',
-    price: '279,000',
-    shippingFee: 'Free Shipping',
-    uploadDate: '29-04-2022 20:00',
-    lastEdited: '29-04-2022 20:00',
-  },
-  {
-    id: 3,
-    saleStatus: 'Sold out',
-    productInfo:
-      'Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI',
-    category: '여성의류',
-    price: '279,000',
-    shippingFee: 'Free Shipping',
-    uploadDate: '29-04-2022 20:00',
-    lastEdited: '29-04-2022 20:00',
-  },
-  {
-    id: 4,
-    saleStatus: 'Sold out',
-    productInfo:
-      'Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI',
-    category: '여성의류',
-    price: '279,000',
-    shippingFee: 'Free Shipping',
-    uploadDate: '29-04-2022 20:00',
-    lastEdited: '29-04-2022 20:00',
-  },
-  {
-    id: 5,
-    saleStatus: 'Waiting for sale',
-    productInfo:
-      'Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI',
-    category: '여성의류',
-    price: '279,000',
-    shippingFee: 'Free Shipping',
-    uploadDate: '29-04-2022 20:00',
-    lastEdited: '29-04-2022 20:00',
-  },
-];
+interface ProductData {
+  id: number;
+  saleStatus: string;
+  productInfo: string;
+  category: string;
+  price: string;
+  shippingFee: string;
+  uploadDate: string;
+  lastEdited: string;
+}
 
 const ProductListTable = () => {
+  const [productListData, setProductListData] = useState<ProductData[]>([]);
+
+  const fetchProductData = () => {
+    fetch('/data/ProductList.json')
+      .then(res => res.json())
+      .then(data => setProductListData(data as ProductData[]));
+  };
+
+  useEffect(() => {
+    fetchProductData();
+  }, []);
+
   return (
     <Wrapper>
       <Table>
         <TableHead>
           <tr>
-            <Checkbox>
-              <input type="checkbox" />
-            </Checkbox>
+            <Th>
+              <CheckBox type="checkbox" />
+            </Th>
             <Th>Sales status</Th>
             <Th>Product Name</Th>
             <Th>Category</Th>
@@ -78,8 +44,8 @@ const ProductListTable = () => {
           </tr>
         </TableHead>
 
-        <TableBody>
-          {PRODUCT_DATA.map(
+        <tbody>
+          {productListData.map(
             ({
               id,
               saleStatus,
@@ -93,7 +59,7 @@ const ProductListTable = () => {
               return (
                 <tr key={id}>
                   <Td width={64}>
-                    <input type="checkbox" />
+                    <CheckBox type="checkbox" />
                   </Td>
                   <Td width={140}>
                     {saleStatus === 'On sale' ? (
@@ -104,14 +70,25 @@ const ProductListTable = () => {
                       <WaitingForSale>{saleStatus}</WaitingForSale>
                     )}
                   </Td>
-                  <Td width={264}>{productInfo}</Td>
+                  <ProductInfo width={264}>
+                    <img
+                      src="https://placeimg.com/64/64/any"
+                      alt="123"
+                      width="64px"
+                      height="64px"
+                      className="productImg"
+                    />
+                    <ProductLink to="#">{productInfo}</ProductLink>
+                  </ProductInfo>
                   <Td width={160}>{category}</Td>
-                  <Td width={160}>{price}</Td>
+                  <Td width={160}>
+                    <Price>{price}</Price>
+                  </Td>
                   <Td width={160}>
                     {shippingFee === 'Free Shipping' ? (
                       <FreeShipping>FREE Shipping</FreeShipping>
                     ) : (
-                      shippingFee
+                      <Price>{shippingFee}</Price>
                     )}
                   </Td>
                   <Td width={160}>{uploadDate}</Td>
@@ -120,7 +97,7 @@ const ProductListTable = () => {
               );
             }
           )}
-        </TableBody>
+        </tbody>
       </Table>
     </Wrapper>
   );
@@ -129,43 +106,38 @@ const ProductListTable = () => {
 export default ProductListTable;
 
 const Wrapper = styled.div`
+  margin-top: 12px;
   overflow-x: scroll;
+  border: 1px solid #dfe1e6;
+  border-radius: 10px 10px 0 0;
+`;
+
+const CheckBox = styled.input`
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: red;
 `;
 
 const Table = styled.table`
-  margin-top: 64px;
   font-size: 14px;
-  border-collapse: separate;
-  border-spacing: 0;
-
-  & tr:first-child th:first-child {
-    border: 1px solid #dfe1e6;
-    border-top-left-radius: 10px;
-  }
-
-  & tr:first-child th:last-child {
-    border: 1px solid #dfe1e6;
-    border-top-right-radius: 10px;
-  }
+  border-style: hidden;
+  width: 100%;
 `;
 
 const TableHead = styled.thead`
   background-color: #f4f5f8;
-`;
-
-const Checkbox = styled.th`
-  width: 64px;
-  vertical-align: middle;
+  font-weight: 600;
 `;
 
 const Th = styled.th`
   height: 48px;
   vertical-align: middle;
   border: 1px solid #dfe1e6;
-`;
 
-const TableBody = styled.tbody`
-  border: 1px solid #dfe1e6;
+  &:nth-child(3) {
+    text-align: left;
+    padding-left: 10px;
+  }
 `;
 
 const Td = styled.td`
@@ -174,6 +146,27 @@ const Td = styled.td`
   text-align: center;
   border: 1px solid #dfe1e6;
   height: 92px;
+`;
+
+const ProductInfo = styled(Td)`
+  & .productImg {
+    border-radius: 4px;
+    margin: 10px;
+    float: left;
+  }
+`;
+
+const ProductLink = styled(Link)`
+  color: #1f66df;
+  text-decoration: underline;
+  text-align: left;
+  line-height: 18px;
+  margin: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 `;
 
 const FreeShipping = styled.span`
@@ -185,6 +178,11 @@ const FreeShipping = styled.span`
   font-weight: 700;
   color: #3d68ff;
   background: #f1f4ff;
+`;
+
+const Price = styled.span`
+  font-weight: 700;
+  letter-spacing: -0.035em;
 `;
 
 const OnSale = styled.span`
