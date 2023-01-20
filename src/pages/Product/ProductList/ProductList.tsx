@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faMagnifyingGlass,
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import ProductListTable from './ProductListTable';
 
@@ -19,20 +15,9 @@ const FILTER_ITEM = [
 
 const ProductList = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All(5)');
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [itemsPerPage] = useState<number>(10);
   const navigate = useNavigate();
 
   const onFilterItemClick = (item: string) => setSelectedFilter(item);
-
-  const onPrevClick = () => {
-    if (currentPage <= 1) return;
-    setCurrentPage(currentPage - 1);
-  };
-
-  const onNextClick = () => {
-    setCurrentPage(currentPage + 1);
-  };
 
   return (
     <Wrapper>
@@ -71,17 +56,7 @@ const ProductList = () => {
         <StatusChangeButton>Change product status</StatusChangeButton>
       </StatusChangeButtonBox>
 
-      <ProductListTable currentPage={currentPage} />
-
-      <PageBtnBox>
-        <PageBtn onClick={onPrevClick}>
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </PageBtn>
-        <CurrentPage>{currentPage}</CurrentPage>
-        <PageBtn onClick={onNextClick}>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </PageBtn>
-      </PageBtnBox>
+      <ProductListTable />
     </Wrapper>
   );
 };
@@ -197,27 +172,4 @@ const StatusChangeButton = styled.button`
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
-`;
-
-const PageBtnBox = styled.div`
-  margin-top: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-`;
-
-const PageBtn = styled.button`
-  border: 1px solid #eaecf0;
-  background-color: transparent;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-`;
-
-const CurrentPage = styled.span`
-  font-weight: 600;
-  font-size: 14px;
-  width: 32px;
-  text-align: center;
 `;
