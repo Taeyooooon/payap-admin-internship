@@ -19,6 +19,8 @@ const ProductList = () => {
 
   const onFilterItemClick = (item: string) => setSelectedFilter(item);
 
+  const onChangeStatusClick = () => {};
+
   return (
     <Wrapper>
       <Header>
@@ -53,7 +55,9 @@ const ProductList = () => {
       </SearchBox>
 
       <StatusChangeButtonBox>
-        <StatusChangeButton>Change product status</StatusChangeButton>
+        <StatusChangeButton onClick={onChangeStatusClick}>
+          Change product status
+        </StatusChangeButton>
       </StatusChangeButtonBox>
 
       <ProductListTable />

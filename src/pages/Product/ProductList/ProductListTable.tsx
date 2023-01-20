@@ -16,13 +16,36 @@ interface ProductData {
   shippingFee: string;
   uploadDate: string;
   lastEdited: string;
+  isChecked: boolean;
 }
+
+const TH_LIST = [
+  { list: 'Sales status' },
+  { list: 'Product Name' },
+  { list: 'Category' },
+  { list: 'Price' },
+  { list: 'Shipping fee' },
+  { list: 'Upload date' },
+  { list: 'Last edited' },
+];
 
 const ProductListTable = () => {
   const [productListData, setProductListData] = useState<ProductData[]>([]);
+
   const [currentPage, setCurrentPage] = useState<number>(1);
   const ITEMSPERPAGE = 10;
   const totalPage = Math.ceil(productListData.length / ITEMSPERPAGE);
+
+  // TODO: 체크박스 상태값 변경 작업중
+  const onCheckBoxClick = (id: number) => {
+    const newData = productListData.map(item => {
+      if (item.id === id) {
+        return { ...item, isChecked: !item.isChecked };
+      }
+      return item;
+    });
+    setProductListData(newData);
+  };
 
   const onPrevClick = () => {
     if (currentPage <= 1) return;
@@ -53,13 +76,9 @@ const ProductListTable = () => {
               <Th>
                 <CheckBox type="checkbox" />
               </Th>
-              <Th>Sales status</Th>
-              <Th>Product Name</Th>
-              <Th>Category</Th>
-              <Th>Price</Th>
-              <Th>Shipping fee</Th>
-              <Th>Upload date</Th>
-              <Th>Last edited</Th>
+              {TH_LIST.map(({ list }) => {
+                return <Th key={list}>{list}</Th>;
+              })}
             </tr>
           </TableHead>
 
@@ -84,7 +103,10 @@ const ProductListTable = () => {
                   return (
                     <tr key={id}>
                       <Td width={64}>
-                        <CheckBox type="checkbox" />
+                        <CheckBox
+                          type="checkbox"
+                          onClick={() => onCheckBoxClick(id)}
+                        />
                       </Td>
                       <Td width={140}>
                         {saleStatus === 'On sale' ? (
@@ -97,10 +119,8 @@ const ProductListTable = () => {
                       </Td>
                       <ProductInfo width={264}>
                         <img
-                          src="https://placeimg.com/64/64/any"
+                          src="https://placeimg.com/64/64/nature"
                           alt="123"
-                          width="64px"
-                          height="64px"
                           className="productImg"
                         />
                         <ProductLink to="#">{productInfo}</ProductLink>
