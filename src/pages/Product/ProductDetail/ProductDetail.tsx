@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import Carousel from './Carousel';
 
 const PRODUCT_INFO_TABLE = [
   { title: 'Brand (Thương hiệu)' },
@@ -36,7 +37,8 @@ const ProductDetail = () => {
       </DateBox>
 
       <ProductDataSection>
-        <Img src="https://placeimg.com/328/328/nature" alt="product img" />
+        <Carousel />
+
         <InfoBox>
           <Info>
             <CategoryText>여성의류</CategoryText>
@@ -62,18 +64,20 @@ const ProductDetail = () => {
       <ProductInfoSection>
         <H3>Product Information</H3>
         <ProductInfoTable>
-          {PRODUCT_INFO_TABLE.map(({ title }) => {
-            return (
-              <tr key={title}>
-                <th>{title}</th>
-                <td>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Beatae autem odit expedita! Illum nam, laudantium iusto
-                  quisquam qui similique incidunt!
-                </td>
-              </tr>
-            );
-          })}
+          <tbody>
+            {PRODUCT_INFO_TABLE.map(({ title }) => {
+              return (
+                <tr key={title}>
+                  <th>{title}</th>
+                  <td>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Beatae autem odit expedita! Illum nam, laudantium iusto
+                    quisquam qui similique incidunt!
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
         </ProductInfoTable>
       </ProductInfoSection>
 
@@ -203,14 +207,16 @@ const ProductDetail = () => {
       <OptionSection>
         <H3>Option</H3>
         <OptionTable>
-          {OPTION_TABLE.map(({ title }) => {
-            return (
-              <tr key={title}>
-                <th>{title}</th>
-                <td>OPTIONS, OPTIONS, OPTIONS</td>
-              </tr>
-            );
-          })}
+          <tbody>
+            {OPTION_TABLE.map(({ title }) => {
+              return (
+                <tr key={title}>
+                  <th>{title}</th>
+                  <td>OPTIONS, OPTIONS, OPTIONS</td>
+                </tr>
+              );
+            })}
+          </tbody>
         </OptionTable>
       </OptionSection>
     </Wrapper>
@@ -271,10 +277,6 @@ const ProductDataSection = styled.section`
   margin: 20px 0;
   display: flex;
   gap: 16px;
-`;
-
-const Img = styled.img`
-  border-radius: 4px;
 `;
 
 const InfoBox = styled.div``;
