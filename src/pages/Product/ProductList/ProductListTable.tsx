@@ -6,6 +6,7 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import StatusChangeModal from './StatusChangeModal';
 
 interface ProductData {
   id: number;
@@ -42,9 +43,9 @@ const ProductListTable = () => {
 
   const [checkedList, setCheckedList] = useState<number[]>([]);
 
-  const onChangeStatusClick = () => {
-    console.log(1);
-  };
+  const [isChangeModalOpen, setIsChangeModalOpen] = useState(false);
+
+  const onChangeStatusClick = () => setIsChangeModalOpen(true);
 
   const onAllCheckBoxClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
@@ -74,11 +75,13 @@ const ProductListTable = () => {
   const onPrevClick = () => {
     if (currentPage <= 1) return;
     setCurrentPage(currentPage - 1);
+    setCheckedList([]);
   };
 
   const onNextClick = () => {
     if (currentPage >= totalPage) return;
     setCurrentPage(currentPage + 1);
+    setCheckedList([]);
   };
 
   const fetchProductData = () => {
@@ -93,6 +96,9 @@ const ProductListTable = () => {
 
   return (
     <>
+      {isChangeModalOpen && (
+        <StatusChangeModal setIsChangeModalOpen={setIsChangeModalOpen} />
+      )}
       <StatusChangeButtonBox>
         <StatusChangeButton
           onClick={onChangeStatusClick}
