@@ -19,8 +19,6 @@ const ProductList = () => {
 
   const onFilterItemClick = (item: string) => setSelectedFilter(item);
 
-  const onChangeStatusClick = () => {};
-
   return (
     <Wrapper>
       <Header>
@@ -53,12 +51,6 @@ const ProductList = () => {
         <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
         <SearchInput placeholder="Search product name" />
       </SearchBox>
-
-      <StatusChangeButtonBox>
-        <StatusChangeButton onClick={onChangeStatusClick}>
-          Change product status
-        </StatusChangeButton>
-      </StatusChangeButtonBox>
 
       <ProductListTable />
     </Wrapper>
@@ -155,25 +147,4 @@ const SearchInput = styled.input`
   &::placeholder {
     color: #ced1d8;
   }
-`;
-
-const StatusChangeButtonBox = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  margin-top: 12px;
-`;
-
-const StatusChangeButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  height: 40px;
-  border: 1px solid #3d68ff;
-  border-radius: 12px;
-  background-color: transparent;
-  color: #3d68ff;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
 `;

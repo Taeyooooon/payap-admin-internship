@@ -40,16 +40,21 @@ const ProductListTable = () => {
     currentPage * ITEMSPERPAGE
   );
 
-  const [checked, setChecked] = useState<number[]>([]);
+  const [checkedList, setCheckedList] = useState<number[]>([]);
+
+  const onChangeStatusClick = () => {
+    console.log(1);
+  };
 
   const onAllCheckBoxClick = (e: React.ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
+
     if (target.checked) {
       const idArray: number[] = [];
       slicedProductData.forEach(el => idArray.push(el.id));
-      setChecked(idArray);
+      setCheckedList(idArray);
     } else {
-      setChecked([]);
+      setCheckedList([]);
     }
   };
 
@@ -58,10 +63,11 @@ const ProductListTable = () => {
     id: number
   ) => {
     const target = e.target as HTMLInputElement;
+
     if (target.checked) {
-      setChecked(prev => [...prev, id]);
+      setCheckedList(prev => [...prev, id]);
     } else {
-      setChecked(checked.filter(el => el !== id));
+      setCheckedList(checkedList.filter(el => el !== id));
     }
   };
 
@@ -87,6 +93,15 @@ const ProductListTable = () => {
 
   return (
     <>
+      <StatusChangeButtonBox>
+        <StatusChangeButton
+          onClick={onChangeStatusClick}
+          disabled={checkedList.length === 0}
+        >
+          Change product status
+        </StatusChangeButton>
+      </StatusChangeButtonBox>
+
       <TableWrapper>
         <Table>
           <TableHead>
@@ -95,7 +110,7 @@ const ProductListTable = () => {
                 <CheckBox
                   type="checkbox"
                   onChange={e => onAllCheckBoxClick(e)}
-                  checked={checked.length === slicedProductData.length}
+                  checked={checkedList.length === slicedProductData.length}
                 />
               </Th>
               {TH_LIST.map(({ list }) => {
@@ -122,7 +137,7 @@ const ProductListTable = () => {
                       <CheckBox
                         type="checkbox"
                         onChange={e => onSingleCheckBoxClick(e, id)}
-                        checked={checked.includes(id)}
+                        checked={checkedList.includes(id)}
                       />
                     </Td>
                     <Td width={140}>
@@ -177,6 +192,27 @@ const ProductListTable = () => {
 };
 
 export default ProductListTable;
+
+const StatusChangeButtonBox = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 12px;
+`;
+
+const StatusChangeButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
+  border: ${({ disabled }) => (disabled ? 'none' : '1px solid #3d68ff')};
+  border-radius: 12px;
+  background-color: ${({ disabled }) => (disabled ? '#EAECF0' : 'transparent')};
+  color: ${({ disabled }) => (disabled ? '#CED1D8' : '#3d68ff')};
+  font-size: 13px;
+  font-weight: 500;
+  cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
+`;
 
 const TableWrapper = styled.div`
   margin-top: 12px;
