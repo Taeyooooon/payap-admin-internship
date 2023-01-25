@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import StatusChangeModal from './StatusChangeModal';
+import { flexBox } from '../../../styles/mixin';
 
 interface ProductData {
   id: number;
@@ -206,9 +207,7 @@ const StatusChangeButtonBox = styled.div`
 `;
 
 const StatusChangeButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${flexBox()}
   width: 160px;
   height: 40px;
   border: ${({ disabled }) => (disabled ? 'none' : '1px solid #3d68ff')};
@@ -227,7 +226,22 @@ const TableWrapper = styled.div`
   border-radius: 10px 10px 0 0;
 `;
 
-const CheckBox = styled.input``;
+const CheckBox = styled.input`
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 1px solid #ced1d8;
+  border-radius: 2px;
+  background-color: #fff;
+  cursor: pointer;
+
+  &:checked {
+    background: url('/images/check.svg') no-repeat;
+    background-color: #21caa1;
+    background-position: center;
+    border-color: #21caa1;
+  }
+`;
 
 const Table = styled.table`
   font-size: 14px;
@@ -316,10 +330,8 @@ const WaitingForSale = styled(OnSale)`
 `;
 
 const PageBtnBox = styled.div`
+  ${flexBox()}
   margin-top: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
 `;
 
