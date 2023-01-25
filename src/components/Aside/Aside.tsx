@@ -64,6 +64,7 @@ const Aside = () => {
                   <span>{title}</span>
                 </ListTitle>
               </Link>
+
               {btnClicked === link && (
                 <List>
                   {list.map(({ id, item, link }) => {
@@ -140,7 +141,6 @@ const Item = styled.li`
   font-size: 12px;
   line-height: 17px;
   padding: 10px 0 10px 42px;
-  color: #aeb4be;
   color: ${({ isClicked }: { isClicked: boolean }) =>
     isClicked ? '#7D99FF' : '#aeb4be'};
   cursor: pointer;

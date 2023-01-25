@@ -248,7 +248,7 @@ const EditBtn = styled.button`
   gap: 4px;
   width: 160px;
   height: 40px;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
   border-radius: 12px;
   background-color: #fff;
   font-size: 14px;
@@ -260,7 +260,7 @@ const DateBox = styled.div`
   font-size: 12px;
   line-height: 16px;
   margin-top: 28px;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
 `;
 
 const Date = styled.span`
@@ -331,8 +331,8 @@ const DeliveryBadge = styled.span`
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #3d68ff;
-  background-color: #f1f4ff;
+  color: ${({ theme }) => theme.FreeShippingColor};
+  background-color: ${({ theme }) => theme.FreeShippingBackGroundColor};
   border-radius: 4px;
   padding: 4px 6px;
   margin-top: 2px;
@@ -347,19 +347,19 @@ const SaleBadge = styled.span`
   display: block;
   width: fit-content;
   color: #2e7d31;
+  background-color: #e8f5e9;
   font-weight: 700;
   font-size: 12px;
   line-height: 17px;
   padding: 1.5px 6px;
-  background-color: #e8f5e9;
   border-radius: 4px;
 `;
 
 const ChageStatusBtn = styled.button`
   margin-top: 16px;
-  color: #3d68ff;
+  color: ${({ theme }) => theme.MainBrandBlue};
   background-color: #fff;
-  border: 1px solid #3d68ff;
+  border: 1px solid ${({ theme }) => theme.MainBrandBlue};
   border-radius: 12px;
   padding: 11px 13px;
   font-weight: 500;
@@ -382,10 +382,9 @@ const ProductInfoTable = styled.table`
   font-size: 12px;
   line-height: 17px;
   width: 100%;
-  border: 1px solid #dfe1e6;
-
+  border: ${({ theme }) => theme.globalBoardStyle};
   & tr {
-    border-bottom: 1px solid #dfe1e6;
+    border-bottom: ${({ theme }) => theme.globalBoardStyle};
   }
   & td {
     padding: 6px 8px;
@@ -412,7 +411,7 @@ const Description = styled.div`
   overflow-y: scroll;
   font-size: 14px;
   line-height: 20px;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
   border-radius: 4px;
   padding: 10px;
   margin-top: 12px;

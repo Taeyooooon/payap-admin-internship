@@ -164,15 +164,11 @@ export default ProductListTable;
 const TableWrapper = styled.div`
   margin-top: 12px;
   overflow-x: scroll;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
   border-radius: 10px 10px 0 0;
 `;
 
-const CheckBox = styled.input`
-  border: 1px solid red;
-  border-radius: 10px;
-  background-color: red;
-`;
+const CheckBox = styled.input``;
 
 const Table = styled.table`
   font-size: 14px;
@@ -188,19 +184,19 @@ const TableHead = styled.thead`
 const Th = styled.th`
   height: 48px;
   vertical-align: middle;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
 
   &:nth-child(3) {
     text-align: left;
-    padding-left: 10px;
+    padding-left: 16px;
   }
 `;
 
 const Td = styled.td`
-  min-width: ${props => props.width}px;
+  min-width: ${({ width }) => width}px;
   vertical-align: middle;
   text-align: center;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
   height: 92px;
 `;
 
@@ -232,8 +228,8 @@ const FreeShipping = styled.span`
   padding: 3px 6px;
   border-radius: 4px;
   font-weight: 700;
-  color: #3d68ff;
-  background: #f1f4ff;
+  color: ${({ theme }) => theme.FreeShippingColor};
+  background-color: ${({ theme }) => theme.FreeShippingBackGroundColor};
 `;
 
 const Price = styled.span`
@@ -246,18 +242,18 @@ const OnSale = styled.span`
   font-size: 12px;
   padding: 2px 6px;
   border-radius: 4px;
-  color: #2e7d31;
-  background-color: #e8f5e9;
+  color: ${({ theme }) => theme.OnSaleColor};
+  background-color: ${({ theme }) => theme.OnSaleBackGroundColor};
 `;
 
 const SoldOut = styled(OnSale)`
-  color: #e33d1c;
-  background-color: #fce9e8;
+  color: ${({ theme }) => theme.SoldOutColor};
+  background-color: ${({ theme }) => theme.SoldOutBackGroundColor};
 `;
 
 const WaitingForSale = styled(OnSale)`
-  color: #f09f02;
-  background-color: #ffeece;
+  color: ${({ theme }) => theme.WaitingForSaleColor};
+  background-color: ${({ theme }) => theme.WaitingForSaleBackGroundColor};
 `;
 
 const PageBtnBox = styled.div`
@@ -270,6 +266,7 @@ const PageBtnBox = styled.div`
 
 const PageBtn = styled.button`
   border: 1px solid #eaecf0;
+  border-radius: 4px;
   background-color: transparent;
   width: 32px;
   height: 32px;

@@ -148,7 +148,7 @@ const SearchBox = styled.div`
 const SearchInput = styled.input`
   width: 100%;
   height: 40px;
-  border: 1px solid #dfe1e6;
+  border: ${({ theme }) => theme.globalBoardStyle};
   border-radius: 12px;
   padding: 0 40px;
 
