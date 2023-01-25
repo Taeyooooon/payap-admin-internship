@@ -35,16 +35,34 @@ const ProductListTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const ITEMSPERPAGE = 10;
   const totalPage = Math.ceil(productListData.length / ITEMSPERPAGE);
+  const slicedProductData = productListData.slice(
+    currentPage * ITEMSPERPAGE - ITEMSPERPAGE,
+    currentPage * ITEMSPERPAGE
+  );
 
-  // TODO: 체크박스 상태값 변경 작업중
-  const onCheckBoxClick = (id: number) => {
-    const newData = productListData.map(item => {
-      if (item.id === id) {
-        return { ...item, isChecked: !item.isChecked };
-      }
-      return item;
-    });
-    setProductListData(newData);
+  const [checked, setChecked] = useState<number[]>([]);
+
+  const onAllCheckBoxClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
+    if (target.checked) {
+      const idArray: number[] = [];
+      slicedProductData.forEach(el => idArray.push(el.id));
+      setChecked(idArray);
+    } else {
+      setChecked([]);
+    }
+  };
+
+  const onSingleCheckBoxClick = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    id: number
+  ) => {
+    const target = e.target as HTMLInputElement;
+    if (target.checked) {
+      setChecked(prev => [...prev, id]);
+    } else {
+      setChecked(checked.filter(el => el !== id));
+    }
   };
 
   const onPrevClick = () => {
@@ -74,7 +92,11 @@ const ProductListTable = () => {
           <TableHead>
             <tr>
               <Th>
-                <CheckBox type="checkbox" />
+                <CheckBox
+                  type="checkbox"
+                  onChange={e => onAllCheckBoxClick(e)}
+                  checked={checked.length === slicedProductData.length}
+                />
               </Th>
               {TH_LIST.map(({ list }) => {
                 return <Th key={list}>{list}</Th>;
@@ -83,65 +105,60 @@ const ProductListTable = () => {
           </TableHead>
 
           <tbody>
-            {/* TODO: 페이지당 10개로 수정 */}
-            {productListData
-              .slice(
-                currentPage * ITEMSPERPAGE - ITEMSPERPAGE,
-                currentPage * ITEMSPERPAGE
-              )
-              .map(
-                ({
-                  id,
-                  saleStatus,
-                  productInfo,
-                  category,
-                  price,
-                  shippingFee,
-                  uploadDate,
-                  lastEdited,
-                }) => {
-                  return (
-                    <tr key={id}>
-                      <Td width={64}>
-                        <CheckBox
-                          type="checkbox"
-                          onClick={() => onCheckBoxClick(id)}
-                        />
-                      </Td>
-                      <Td width={140}>
-                        {saleStatus === 'On sale' ? (
-                          <OnSale>{saleStatus}</OnSale>
-                        ) : saleStatus === 'Sold out' ? (
-                          <SoldOut>{saleStatus}</SoldOut>
-                        ) : (
-                          <WaitingForSale>{saleStatus}</WaitingForSale>
-                        )}
-                      </Td>
-                      <ProductInfo width={264}>
-                        <img
-                          src="https://placeimg.com/64/64/nature"
-                          alt="123"
-                          className="productImg"
-                        />
-                        <ProductLink to="#">{productInfo}</ProductLink>
-                      </ProductInfo>
-                      <Td width={160}>{category}</Td>
-                      <Td width={160}>
-                        <Price>{price}</Price>
-                      </Td>
-                      <Td width={160}>
-                        {shippingFee === 'Free Shipping' ? (
-                          <FreeShipping>FREE Shipping</FreeShipping>
-                        ) : (
-                          <Price>{shippingFee}</Price>
-                        )}
-                      </Td>
-                      <Td width={160}>{uploadDate}</Td>
-                      <Td width={160}>{lastEdited}</Td>
-                    </tr>
-                  );
-                }
-              )}
+            {slicedProductData.map(
+              ({
+                id,
+                saleStatus,
+                productInfo,
+                category,
+                price,
+                shippingFee,
+                uploadDate,
+                lastEdited,
+              }) => {
+                return (
+                  <tr key={id}>
+                    <Td width={64}>
+                      <CheckBox
+                        type="checkbox"
+                        onChange={e => onSingleCheckBoxClick(e, id)}
+                        checked={checked.includes(id)}
+                      />
+                    </Td>
+                    <Td width={140}>
+                      {saleStatus === 'On sale' ? (
+                        <OnSale>{saleStatus}</OnSale>
+                      ) : saleStatus === 'Sold out' ? (
+                        <SoldOut>{saleStatus}</SoldOut>
+                      ) : (
+                        <WaitingForSale>{saleStatus}</WaitingForSale>
+                      )}
+                    </Td>
+                    <ProductInfo width={264}>
+                      <img
+                        src="https://placeimg.com/64/64/nature"
+                        alt="123"
+                        className="productImg"
+                      />
+                      <ProductLink to="#">{productInfo}</ProductLink>
+                    </ProductInfo>
+                    <Td width={160}>{category}</Td>
+                    <Td width={160}>
+                      <Price>{price}</Price>
+                    </Td>
+                    <Td width={160}>
+                      {shippingFee === 'Free Shipping' ? (
+                        <FreeShipping>FREE Shipping</FreeShipping>
+                      ) : (
+                        <Price>{shippingFee}</Price>
+                      )}
+                    </Td>
+                    <Td width={160}>{uploadDate}</Td>
+                    <Td width={160}>{lastEdited}</Td>
+                  </tr>
+                );
+              }
+            )}
           </tbody>
         </Table>
       </TableWrapper>
