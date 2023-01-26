@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import InputForm from '../../../components/common/input_form';
 import Subtitle from '../../../components/common/subtitle';
 
-// ToDo: 이 페이지에서 데이터를 받아서 inputForm에게 props로 전달
 const ProductNameAreaContainer = () => {
   const [productName, setProductName] = useState<string | undefined>('');
 
