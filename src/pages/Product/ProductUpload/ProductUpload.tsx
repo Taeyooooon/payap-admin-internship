@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ProductNameAreaContainer from './product_name_area';
 const ProductUpload = () => {
   return (
     <ContentsContainer>
       <PageTitle>Upload product</PageTitle>
       <RemarkMandatoryInput>* Mandatory field.</RemarkMandatoryInput>
-      test
+      <ProductNameAreaContainer />
     </ContentsContainer>
   );
 };
@@ -14,6 +14,7 @@ const ProductUpload = () => {
 export default ProductUpload;
 
 const ContentsContainer = styled.div`
+  padding: 30px 30px 30px 30px;
 `;
 
 const PageTitle = styled.div`
