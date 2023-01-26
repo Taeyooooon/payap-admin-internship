@@ -15,9 +15,14 @@ const FILTER_ITEM = [
 
 const ProductList = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All(5)');
+  const [searchValue, setSearchValue] = useState<string>('');
   const navigate = useNavigate();
 
   const onFilterItemClick = (item: string) => setSelectedFilter(item);
+
+  const onChangeSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(e.target.value);
+  };
 
   return (
     <Wrapper>
@@ -49,10 +54,13 @@ const ProductList = () => {
 
       <SearchBox>
         <FontAwesomeIcon icon={faMagnifyingGlass} className="icon" />
-        <SearchInput placeholder="Search product name" />
+        <SearchInput
+          placeholder="Search product name"
+          onChange={onChangeSearchInput}
+        />
       </SearchBox>
 
-      <ProductListTable />
+      <ProductListTable searchValue={searchValue} />
     </Wrapper>
   );
 };
