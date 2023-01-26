@@ -14,7 +14,6 @@ const ProductUpload = () => {
 export default ProductUpload;
 
 const ContentsContainer = styled.div`
-  padding: 30px 30px 30px 270px;
 `;
 
 const PageTitle = styled.div`
