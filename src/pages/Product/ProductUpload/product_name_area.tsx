@@ -22,5 +22,5 @@ const ProductNameAreaContainer = () => {
 export default ProductNameAreaContainer;
 
 const NameAreaContainer = styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
 `;
