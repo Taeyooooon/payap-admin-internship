@@ -37,6 +37,10 @@ interface ProductData {
   isChecked: boolean;
 }
 
+interface Props {
+  searchValue: string;
+}
+
 const TH_LIST = [
   { list: 'Sales status' },
   { list: 'Product Name' },
@@ -47,20 +51,29 @@ const TH_LIST = [
   { list: 'Last edited' },
 ];
 
-const ProductListTable = () => {
+const ProductListTable = ({ searchValue }: Props) => {
+  const [checkedList, setCheckedList] = useState<string[]>([]);
+  const [isChangeModalOpen, setIsChangeModalOpen] = useState(false);
   const [productListData, setProductListData] = useState<ProductData[]>([]);
+  const [searchData, setSearchData] = useState<ProductData[]>([]);
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const ITEMSPERPAGE = 10;
-  const totalPage = Math.ceil(productListData.length / ITEMSPERPAGE);
-  const slicedProductData = productListData.slice(
-    currentPage * ITEMSPERPAGE - ITEMSPERPAGE,
-    currentPage * ITEMSPERPAGE
-  );
+  const totalPage =
+    searchValue === ''
+      ? Math.ceil(productListData.length / ITEMSPERPAGE)
+      : Math.ceil(searchData.length / ITEMSPERPAGE);
 
-  const [checkedList, setCheckedList] = useState<string[]>([]);
-
-  const [isChangeModalOpen, setIsChangeModalOpen] = useState(false);
+  const slicedProductData =
+    searchValue === ''
+      ? productListData.slice(
+          currentPage * ITEMSPERPAGE - ITEMSPERPAGE,
+          currentPage * ITEMSPERPAGE
+        )
+      : searchData.slice(
+          currentPage * ITEMSPERPAGE - ITEMSPERPAGE,
+          currentPage * ITEMSPERPAGE
+        );
 
   const onChangeStatusClick = () => setIsChangeModalOpen(true);
 
@@ -110,6 +123,15 @@ const ProductListTable = () => {
   useEffect(() => {
     fetchProductData();
   }, []);
+
+  useEffect(() => {
+    if (searchValue === '') return;
+
+    const searchedData = productListData.filter(data => {
+      return data.name.toLowerCase().includes(searchValue.toLowerCase());
+    });
+    setSearchData(searchedData);
+  }, [searchValue]);
 
   return (
     <>
