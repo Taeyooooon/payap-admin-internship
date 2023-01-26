@@ -8,6 +8,8 @@ const colors = {
   WaitingForSaleBackGroundColor: '#ffeece',
   FreeShippingColor: '#3d68ff',
   FreeShippingBackGroundColor: '#f1f4ff',
+
+  gray300: '#DFE1E6',
 };
 
 const styles = {
