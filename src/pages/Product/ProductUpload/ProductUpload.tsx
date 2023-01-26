@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import ProductNameAreaContainer from './product_name_area';
 const ProductUpload = () => {
   return (
     <ContentsContainer>
       <PageTitle>Upload product</PageTitle>
       <RemarkMandatoryInput>* Mandatory field.</RemarkMandatoryInput>
-      test
+      <ProductNameAreaContainer />
     </ContentsContainer>
   );
 };
