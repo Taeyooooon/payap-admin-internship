@@ -10,14 +10,30 @@ import StatusChangeModal from './StatusChangeModal';
 import { flexBox } from '../../../styles/mixin';
 
 interface ProductData {
-  id: number;
+  _id: {
+    $oid: string;
+  };
   saleStatus: string;
-  productInfo: string;
+  name: string;
   category: string;
-  price: string;
+  pricing: {
+    price: string;
+    originalPrice?: string;
+    discountRate?: string;
+  };
   shippingFee: string;
   uploadDate: string;
   lastEdited: string;
+  options: {
+    color?: string[];
+    size?: string[];
+  };
+  specification: {
+    madeIn: string;
+    material: string;
+  };
+  thumbnailUrls: string;
+  thumbnailArray: string[];
   isChecked: boolean;
 }
 
@@ -36,7 +52,7 @@ const TH_LIST = [
 ];
 
 const ProductListTable = ({ searchValue }: Props) => {
-  const [checkedList, setCheckedList] = useState<number[]>([]);
+  const [checkedList, setCheckedList] = useState<string[]>([]);
   const [isChangeModalOpen, setIsChangeModalOpen] = useState(false);
   const [productListData, setProductListData] = useState<ProductData[]>([]);
   const [searchData, setSearchData] = useState<ProductData[]>([]);
@@ -65,8 +81,8 @@ const ProductListTable = ({ searchValue }: Props) => {
     const target = e.target as HTMLInputElement;
 
     if (target.checked) {
-      const idArray: number[] = [];
-      slicedProductData.forEach(el => idArray.push(el.id));
+      const idArray: string[] = [];
+      slicedProductData.forEach(el => idArray.push(el._id.$oid));
       setCheckedList(idArray);
     } else {
       setCheckedList([]);
@@ -75,7 +91,7 @@ const ProductListTable = ({ searchValue }: Props) => {
 
   const onSingleCheckBoxClick = (
     e: React.ChangeEvent<HTMLInputElement>,
-    id: number
+    id: string
   ) => {
     const target = e.target as HTMLInputElement;
 
@@ -112,7 +128,7 @@ const ProductListTable = ({ searchValue }: Props) => {
     if (searchValue === '') return;
 
     const searchedData = productListData.filter(data => {
-      return data.productInfo.toLowerCase().includes(searchValue.toLowerCase());
+      return data.name.toLowerCase().includes(searchValue.toLowerCase());
     });
     setSearchData(searchedData);
   }, [searchValue]);
@@ -151,22 +167,22 @@ const ProductListTable = ({ searchValue }: Props) => {
           <tbody>
             {slicedProductData.map(
               ({
-                id,
+                _id,
                 saleStatus,
-                productInfo,
+                name,
                 category,
-                price,
+                pricing,
                 shippingFee,
                 uploadDate,
                 lastEdited,
               }) => {
                 return (
-                  <tr key={id}>
+                  <tr key={_id.$oid}>
                     <Td width={64}>
                       <CheckBox
                         type="checkbox"
-                        onChange={e => onSingleCheckBoxClick(e, id)}
-                        checked={checkedList.includes(id)}
+                        onChange={e => onSingleCheckBoxClick(e, _id.$oid)}
+                        checked={checkedList.includes(_id.$oid)}
                       />
                     </Td>
                     <Td width={140}>
@@ -184,11 +200,11 @@ const ProductListTable = ({ searchValue }: Props) => {
                         alt="123"
                         className="productImg"
                       />
-                      <ProductLink to="#">{productInfo}</ProductLink>
+                      <ProductLink to="#">{name}</ProductLink>
                     </ProductInfo>
                     <Td width={160}>{category}</Td>
                     <Td width={160}>
-                      <Price>{price}</Price>
+                      <Price>{pricing.price}</Price>
                     </Td>
                     <Td width={160}>
                       {shippingFee === 'Free Shipping' ? (

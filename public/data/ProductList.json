@@ -1,112 +1,370 @@
 [
   {
-    "id": 1,
+    "_id": { "$oid": "1" },
     "saleStatus": "On sale",
-    "productInfo": "TÚI XÁCH NỮ TULIP BAG",
+    "name": "TÚI XÁCH NỮ TULIP BAG",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 2,
+    "_id": { "$oid": "2" },
     "saleStatus": "On sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HIWomen Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HIWomen Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": {
+      "price": "279,000 đ",
+      "originalPrice": "600000",
+      "discountRate": "12"
+    },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 3,
+    "_id": { "$oid": "3" },
     "saleStatus": "Sold out",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 4,
+    "_id": { "$oid": "4" },
     "saleStatus": "Sold out",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": {
+      "price": "279,000 đ",
+      "originalPrice": "600000",
+      "discountRate": "12"
+    },
     "shippingFee": "20.000 đ",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 5,
+    "_id": { "$oid": "5" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 6,
+    "_id": { "$oid": "6" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": {
+      "price": "279,000 đ",
+      "originalPrice": "600000",
+      "discountRate": "12"
+    },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 7,
+    "_id": { "$oid": "7" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 8,
+    "_id": { "$oid": "8" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 9,
+    "_id": { "$oid": "9" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 10,
+    "_id": { "$oid": "10" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": {
+      "price": "279,000 đ",
+      "originalPrice": "600000",
+      "discountRate": "12"
+    },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   },
   {
-    "id": 11,
+    "_id": { "$oid": "11" },
     "saleStatus": "Waiting for sale",
-    "productInfo": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
+    "name": "Women Deep V Neck Strip Jumpsuit Short Sleeve Romp HI Romp HI Romp HI",
     "category": "여성의류",
-    "price": "279,000 đ",
+    "pricing": { "price": "279,000 đ" },
     "shippingFee": "Free Shipping",
     "uploadDate": "29-04-2022 20:00",
-    "lastEdited": "29-04-2022 20:00"
+    "lastEdited": "29-04-2022 20:00",
+    "options": {
+      "color": ["WHITE", "BLACK"],
+      "size": ["FREE"]
+    },
+    "specification": {
+      "madeIn": "Korea",
+      "material": "100% cotton"
+    },
+    "thumbnailUrls": "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png,https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png,https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png,https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png,https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png,https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png,https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png,https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png,https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png,https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png,https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png",
+    "thumbnailArray": [
+      "https://product.hstatic.net/200000610273/product/1669249892825_ad4af82f-cdf2-4048-9eb2-3657932aef10_83aebc5b5b234e2cb41ecd6d9de0211e.png",
+      "https://product.hstatic.net/200000610273/product/1668127690009_37c86bdf-548f-486d-9b85-6ca914a094cd_7e23e88759604cdaa1e5aeff2bc362cb.png",
+      "https://product.hstatic.net/200000610273/product/8_72e4b39396e0413e8bb090a911425ccd.png",
+      "https://product.hstatic.net/200000610273/product/1669249892527_2bd0fb3c-a709-4a1e-8764-3705affd76a8_53d0465b394e4eb48cb531ce7abba92a.png",
+      "https://product.hstatic.net/200000610273/product/1668127689710_1bca2ffa-366e-46fd-8476-30326a84a678_be574dc64d474ad89239ff8df6c174c5.png",
+      "https://product.hstatic.net/200000610273/product/1666573211445_9545a7f1-0f29-473f-b882-fc84cbe97c1b_e592068fba77400794697abef56e4140.png",
+      "https://product.hstatic.net/200000610273/product/4_43848d73634a4c56bb755416dc41e855.png",
+      "https://product.hstatic.net/200000610273/product/5_877da475822e4df089af4bd794b129f4.png",
+      "https://product.hstatic.net/200000610273/product/6_5a3af3cf0f8f44629edddd3a9aa8a1fd.png",
+      "https://product.hstatic.net/200000610273/product/7_8d94395234d647c3a5a762457a97fc0f.png",
+      "https://product.hstatic.net/200000610273/product/1665960315148_8948e416-6a42-42fc-9825-b76ef5ab48ef_0aaac67426f1481ea6f3f4f7ca28adee.png"
+    ]
   }
 ]
