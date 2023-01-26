@@ -3,21 +3,28 @@ import styled from 'styled-components';
 
 const ProductUpload = () => {
   return (
-    <Wrapper>
-      <Title>Upload Product</Title>
-    </Wrapper>
+    <ContentsContainer>
+      <PageTitle>Upload product</PageTitle>
+      <RemarkMandatoryInput>* Mandatory field.</RemarkMandatoryInput>
+      test
+    </ContentsContainer>
   );
 };
 
 export default ProductUpload;
 
-const Wrapper = styled.div`
-  padding: 34px 24px;
+const ContentsContainer = styled.div`
 `;
 
-const Title = styled.h1`
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 36.4px;
-  letter-spacing: -0.3px;
+const PageTitle = styled.div`
+  padding: 0px 0px 50px 0px;
+  font-size: 22px;
+  font-weight: 600;
+`;
+const RemarkMandatoryInput = styled.div`
+  padding: 0px 0px 30px 0px;
+  right: 30%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
 `;
