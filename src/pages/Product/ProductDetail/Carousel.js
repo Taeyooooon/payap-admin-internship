@@ -87,7 +87,7 @@ const NextBtn = styled.div`
   cursor: pointer;
 
   & .icon * {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.6);
   }
 `;
 
@@ -99,6 +99,19 @@ const StyledSwiper = styled(Swiper)`
     display: block;
     width: 100%;
     user-select: none;
+  }
+
+  .swiper-pagination-fraction {
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #fff;
   }
 `;
 
