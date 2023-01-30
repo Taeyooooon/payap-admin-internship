@@ -200,7 +200,9 @@ const ProductListTable = ({ searchValue }: Props) => {
                         alt="123"
                         className="productImg"
                       />
-                      <ProductLink to="#">{name}</ProductLink>
+                      <ProductLink to={`/product-detail/${_id.$oid}`}>
+                        {name}
+                      </ProductLink>
                     </ProductInfo>
                     <Td width={160}>{category}</Td>
                     <Td width={160}>
