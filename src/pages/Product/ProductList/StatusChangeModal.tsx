@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { flexBox, positionCenter } from '../../../styles/mixin';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const RADIO_ITEM = [
+  { id: '1', item: 'Waiting for sale' },
+  { id: '2', item: 'On sale' },
+  { id: '3', item: 'Sold out' },
+];
 interface Props {
+  checkedList: string[];
   setIsChangeModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const StatusChangeModal = ({ setIsChangeModalOpen }: Props) => {
+const StatusChangeModal = ({ setIsChangeModalOpen, checkedList }: Props) => {
+  const [checkedRadio, setCheckedRadio] = useState<string>('');
   const onCloseClick = () => setIsChangeModalOpen(false);
+
+  const onRadioClick = (e: React.MouseEvent, item: string) => {
+    setCheckedRadio(item);
+  };
+
+  const onSaveClick = () => {};
 
   return (
     <Wrapper>
@@ -24,25 +37,24 @@ const StatusChangeModal = ({ setIsChangeModalOpen }: Props) => {
       </Header>
 
       <SelectBox>
-        <RadioBox>
-          <Radio type="radio" id="1" name="status" />
-          <Label htmlFor="1">Waiting for sale</Label>
-        </RadioBox>
-        <RadioBox>
-          <Radio type="radio" id="2" name="status" />
-          <Label htmlFor="2">On sale</Label>
-        </RadioBox>
-        <RadioBox>
-          <Radio type="radio" id="3" name="status" />
-          <Label htmlFor="3" color="red">
-            Sold out
-          </Label>
-        </RadioBox>
+        {RADIO_ITEM.map(({ id, item }) => {
+          return (
+            <RadioBox key={item} onClick={e => onRadioClick(e, item)}>
+              <Radio type="radio" id={id} name="status" />
+              <Label
+                htmlFor={id}
+                color={item === 'Sold out' ? 'red' : undefined}
+              >
+                {item}
+              </Label>
+            </RadioBox>
+          );
+        })}
       </SelectBox>
 
       <BtnSection>
         <CancleBtn onClick={onCloseClick}>Cancle</CancleBtn>
-        <SaveBtn>Save</SaveBtn>
+        <SaveBtn onClick={onSaveClick}>Save</SaveBtn>
       </BtnSection>
     </Wrapper>
   );

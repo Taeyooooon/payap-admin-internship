@@ -136,7 +136,10 @@ const ProductListTable = ({ searchValue }: Props) => {
   return (
     <>
       {isChangeModalOpen && (
-        <StatusChangeModal setIsChangeModalOpen={setIsChangeModalOpen} />
+        <StatusChangeModal
+          checkedList={checkedList}
+          setIsChangeModalOpen={setIsChangeModalOpen}
+        />
       )}
       <StatusChangeButtonBox>
         <StatusChangeButton
