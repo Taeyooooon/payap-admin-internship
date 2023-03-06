@@ -203,11 +203,21 @@ const ProductListTable = ({ searchValue }: Props) => {
                         alt="123"
                         className="productImg"
                       />
-                      <ProductLink to="#">{name}</ProductLink>
+                      <ProductLink to={`/product-detail/${_id.$oid}`}>
+                        {name}
+                      </ProductLink>
                     </ProductInfo>
                     <Td width={160}>{category}</Td>
                     <Td width={160}>
-                      <Price>{pricing.price}</Price>
+                      {pricing.originalPrice ? (
+                        <>
+                          <OriginalPrice>{pricing.originalPrice}</OriginalPrice>
+                          <DiscountRate>{pricing.discountRate}%</DiscountRate>
+                          <Price>{pricing.price}</Price>
+                        </>
+                      ) : (
+                        <Price>{pricing.price}</Price>
+                      )}
                     </Td>
                     <Td width={160}>
                       {shippingFee === 'Free Shipping' ? (
@@ -344,6 +354,23 @@ const FreeShipping = styled.span`
   font-weight: 700;
   color: ${({ theme }) => theme.FreeShippingColor};
   background-color: ${({ theme }) => theme.FreeShippingBackGroundColor};
+`;
+
+const DiscountRate = styled.span`
+  margin-right: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: ${({ theme }) => theme.green600};
+`;
+
+const OriginalPrice = styled.span`
+  display: block;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration-line: line-through;
+  line-height: 17px;
+  color: ${({ theme }) => theme.gray500};
 `;
 
 const Price = styled.span`

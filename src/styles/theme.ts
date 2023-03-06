@@ -9,7 +9,10 @@ const colors = {
   FreeShippingColor: '#3d68ff',
   FreeShippingBackGroundColor: '#f1f4ff',
 
+  green600: '#21CAA1',
+
   gray300: '#DFE1E6',
+  gray500: '#AEB4BE',
 };
 
 const styles = {
